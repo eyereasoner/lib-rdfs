@@ -1,0 +1,89 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+<> 
+    dct:hasVersion "0.1" ;
+    dct:description "An rdfs components library". 
+
+rdfs:domain 
+    rdfs:domain rdf:Property ;
+    rdfs:range rdfs:Class .
+
+rdfs:range 
+    rdfs:domain rdfs:Property ;
+    rdfs:range rdfs:Class .
+
+rdfs:subClassOf
+    rdfs:domain rdfs:Class ;
+    rdfs:range rdfs:Class .
+
+rdfs:subPropertyOf 
+    rdfs:domain rdf:Property ;
+    rdfs:range rdf:Property .
+
+(_:X _:Y) log:onNegativeSurface {
+    
+    _:X rdfs:domain _:Y .
+    
+    () log:onNegativeSurface {
+        (_:U _:V) log:onNegativeSurface {
+
+            _:U _:X _:V .
+
+            () log:onNegativeSurface {
+                _:U rdf:type _:Y .
+            } .
+        } .
+    } .
+} .
+
+(_:X _:Y) log:onNegativeSurface {
+
+    _:X rdfs:range _:Y .
+
+    () log:onNegativeSurface {
+
+        (_:U _:V) log:onNegativeSurface {
+            
+            _:U _:X _:V .
+
+            () log:onNegativeSurface {
+                _:V rdf:type _:Y .
+            }   .
+        } .    
+    }
+} .
+
+(_:X _:Y) log:onNegativeSurface {
+
+    _:X rdfs:subClassOf _:Y .
+
+    () log:onNegativeSurface {
+        (_:U) log:onNegativeSurface {
+
+            _:U rdf:type _:X .
+
+            () log:onNegativeSurface {
+                _:U rdf:type _:Y .
+            } .
+        } .
+    } .
+} .
+
+(_:X _:Y) log:onNegativeSurface {
+
+    _:X rdfs:subPropertyOf _:Y .
+
+    () log:onNegativeSurface {
+        (_:U _:V) log:onNegativeSurface {
+
+            _:U _:X _:V .
+
+            () log:onNegativeSurface {
+                _:U _:Y _:V.
+            } .
+        } .
+    } .
+} .

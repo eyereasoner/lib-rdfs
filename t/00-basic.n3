@@ -1,18 +1,4 @@
 @prefix : <https://example.org/ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-# Definitions
-:knows
-    rdfs:domain :Person ;
-    rdfs:range :Person .
-
-:Person rdfs:subClassOf :Human .
-
-:likes rdfs:subPropertyOf :knows .
-:loves rdfs:subPropertyOf :likes .
-
-# Data
-:Alice :loves :Bob .
 
 # Test
 {

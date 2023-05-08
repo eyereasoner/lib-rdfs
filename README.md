@@ -34,6 +34,12 @@ Add the `lib-rdfs.n3` to your N3 project and run the eye reasoner. E.g.
 eye --nope --quiet --pass lib-rdfs.n3 your-file.n3
 ```
 
+Add the `lib-rdfs.n3s` to your RDF Surfaces project and run the eye reasoner. E.g.
+
+```
+eye --quiet --blogic lib-rdfs.n3s your-file.n3s
+```
+
 # Dependencies
 
 NONE

@@ -1,0 +1,17 @@
+@prefix : <https://example.org/ns#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+# Test
+() log:onNegativeSurface {
+    :Alice a :Person , :Human .
+    :Bob a :Person , :Human .
+    :Alice :likes :Bob .
+    :Alice :knows :Bob .
+    () log:onNegativeSurface {
+        <> :is true .
+    } .
+} .
+
+(_:S) log:onQuerySurface {
+    _:S :is true .
+} .
