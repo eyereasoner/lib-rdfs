@@ -40,6 +40,13 @@ Add the `lib-rdfs.n3s` to your RDF Surfaces project and run the eye reasoner. E.
 eye --quiet --blogic lib-rdfs.n3s your-file.n3s
 ```
 
+# Vocabulary
+
+- [rdfs:domain](https://www.w3.org/TR/rdf-schema/#ch_domain)
+- [rdfs:range](https://www.w3.org/TR/rdf-schema/#ch_range)
+- [rdfs:subClassOf](https://www.w3.org/TR/rdf-schema/#ch_subclassof)
+- [rdfs:subPropertyOf](https://www.w3.org/TR/rdf-schema/#ch_subpropertyof)
+
 # Dependencies
 
 NONE
