@@ -11,7 +11,7 @@ rdfs:domain
     rdfs:range rdfs:Class .
 
 rdfs:range 
-    rdfs:domain rdfs:Property ;
+    rdfs:domain rdf:Property ;
     rdfs:range rdfs:Class .
 
 rdfs:subClassOf
